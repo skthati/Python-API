@@ -3,7 +3,7 @@ import random
 
 
 def new_quote():
-    with open("sandeep-quotes/my_quotes.txt") as my_quotes:
+    with open("sandeep-quotes/my_quotes.txt", encoding='utf8') as my_quotes:
         data = my_quotes.readlines()
         data = [i[:-1] for i in data]
     
