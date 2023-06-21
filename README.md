@@ -13,11 +13,23 @@
 <hr>
 <ol>
     <li><a href="#python-api-basics">Python API Basics</a></li>
+    <li><a href="#kanye-quote">Kanye Quote</a></li>
     <li><a href="#bloopers">Bloopers</a></li>
 </ol>
 <hr>
 <hr>
 
+
+## Kanye Quotes <a name="kanye-quote"></a>
+Simple API pulls a quote from URL api.kanye.rest and displays the quote in local TKinter window. Everytime the button is clicked, Quote will be refreshed.
+
+![Alt text](kanye/kanye-quotes.gif)
+
+[Code file main.py](kanye/main.py)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<hr>  
 
 # Python API Basics
  Below is basic code to request an API. 
