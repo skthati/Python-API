@@ -1,5 +1,24 @@
 import requests
 import datetime as dt
+import smtplib
+
+# ---------- Send email -----------#
+my_email = "pythonmail@sloka.co.nz"
+my_password = "Today@123"
+to_email = "nsd1026@gmail.com"
+
+def send_email():
+    with smtplib.SMTP_PORT("smtp.gmail.com") as connection:
+        connection.starttls()
+        connection.login(my_email, my_password)
+
+        connection.sendmail(
+            from_addr=my_email, 
+            to_addrs=to_email, 
+            msg="Subject: ISS Satellite in the sky!! 1\n\nSatellite is above Auckland, Go and look outside."
+        )
+
+
 
 # ------------- My city location ------------#
 MY_LAT = -36.848461
@@ -33,7 +52,8 @@ sunset = sunset.split('T')[1].split(':')[0]
 # Time at my location.
 
 now = dt.datetime.now()
-print(now)
+current_hour = now.hour
 
 if float(iss_lat)-5 < MY_LAT < float(iss_lat) +5 and float(iss_lng)-5 < MY_LNG < float(iss_lng)+5:
-    pass
+    if 0 <= current_hour <= int(sunset) or int(sunrise) <= current_hour <= 24:
+        send_email()

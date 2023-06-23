@@ -74,6 +74,44 @@ import webbrowser
 webbrowser.open(f"https://www.latlong.net/c/?lat={data['iss_position']['latitude']}&long={data['iss_position']['longitude']}")
 ```
 
+## API to API <a name="api-to-api"></a>
+Get data from one API and pass the data to Another API.
+
+Here is a simple application which get the latitude and Longitude of IIS Satellite from api.open-notify.org and pass that data to api.sunrise-sunset.org to find the sunrise and sunset times at that location.
+
+```Python
+import requests
+
+
+iss_response = requests.get("http://api.open-notify.org/iss-now.json")
+
+location_data = iss_response.json()
+
+print(location_data)
+
+iss_lat = location_data['iss_position']['latitude']
+iss_lon = location_data['iss_position']['longitude']
+
+# print(iss_lat)
+# print(iss_lon)
+
+parameters = {
+    "lat": iss_lat,
+    "lng": iss_lon
+}
+
+response = requests.get("https://api.sunrise-sunset.org/json", params=parameters)
+
+data = response.json()
+
+print(data)
+
+```
+
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<hr>  
 
 
 
