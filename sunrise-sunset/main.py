@@ -1,6 +1,5 @@
 import requests
 
-
 iss_response = requests.get("http://api.open-notify.org/iss-now.json")
 
 location_data = iss_response.json()
