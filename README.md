@@ -108,6 +108,13 @@ print(data)
 
 ```
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<hr>  
+## Dog Facts
+
+Retrieve new random Dog fact from api `https://dogapi.dog/api/v2/facts` and display to html.
+
+![Alt text](iss-browser/dog-facts.gif)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
