@@ -110,6 +110,7 @@ print(data)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <hr>  
+
 ## Dog Facts
 
 Retrieve new random Dog fact from api `https://dogapi.dog/api/v2/facts` and display to html on every refresh of the page.
@@ -140,7 +141,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=8001, debug=True)
 ```
 
-![Alt text](iss-browser/dog-facts.gif)
+![Alt text](dog-facts/dog-facts.gif)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
